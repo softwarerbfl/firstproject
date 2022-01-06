@@ -1,0 +1,28 @@
+<!--전체 Article 목록을 보여주는 테이블-->
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <!--title에 해당 id에 해당하는 링크 걸어줌-->
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+
+<!--새로운 Article을 작성할 수 있는 페이지로 이동할 수 있는 버튼을 생성-->
+<a href="/articles/new">New Article</a>
+
+{{>layouts/footer}}
