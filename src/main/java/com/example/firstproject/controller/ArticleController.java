@@ -82,5 +82,10 @@ public class ArticleController {
         //뷰 페이지 설정
         return "articles/edit";
     }
+    @PostMapping("/articles/update")
+    public String update(ArticleForm form){
+        log.info(form.toString());
+        return "";
+    }
 }
 
