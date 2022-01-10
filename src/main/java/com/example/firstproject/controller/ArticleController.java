@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
-@Controller
+@Controller //뷰 템플릿을 반환!
 @Slf4j //로깅을 위한 어노테이션
 public class ArticleController {
     @Autowired
