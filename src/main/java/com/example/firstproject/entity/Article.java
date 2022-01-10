@@ -22,6 +22,15 @@ public class Article {
     private String title;
     @Column
     private String content;
+    public void patch(Article article){
+        //update전의 내용이 존재하면 일단 넣어준다.
+        if(article.title!=null){
+            this.title=article.title;
+        }
+        if(article.content!=null){
+            this.content=article.content;
+        }
 
+    }
 
 }
