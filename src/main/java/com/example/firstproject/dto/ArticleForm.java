@@ -7,7 +7,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class ArticleForm {
-    private long id; //id필드 추가!
+    private Long id; //id필드 추가!
     private String title;
     private String content;
 

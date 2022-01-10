@@ -38,7 +38,7 @@ public class ArticleController {
 
         //1. Dto를 변환! Entity!
         Article article=form.toEntity();
-        log.info(form.toString());
+        log.info(article.toString());
         //System.out.println(article.toString());
 
         //2. Repository에게 Entity를 DB안에 저장하게 함!
@@ -50,7 +50,7 @@ public class ArticleController {
 
     //localhost:8080/articles/1이라면 id가 1인 사람의 정보 조회
     @GetMapping("/articles/{id}")
-    public String show(@PathVariable long id, Model model){
+    public String show(@PathVariable Long id, Model model){
         log.info("id = "+id); //id를 잘 받아왔는지 확인
 
         //1. id로 데이터를 가져옴
@@ -90,7 +90,7 @@ public class ArticleController {
         log.info(form.toString());
         //1 : DTO를 엔티티로 변환
         Article articleEntity=form.toEntity();
-        log.info(form.toString());
+        log.info(articleEntity.toString());
 
         //2 : 엔티티를 DTO로 저장
         //2-1 : DB에서 기존 데이터를 가져온다
